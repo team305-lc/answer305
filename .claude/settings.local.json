@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:unsplash.com)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(python3 -c \"from PIL import Image; img = Image.open\\(r'C:\\\\Users\\\\mille\\\\Desktop\\\\my\\\\41_副業\\\\catalog\\\\img\\\\golden_lucky_cat.png'\\); print\\(img.size, img.mode\\)\")",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $img = [System.Drawing.Image]::FromFile\\(\"C:\\\\Users\\\\mille\\\\Desktop\\\\my\\\\41_副業\\\\catalog\\\\img\\\\golden_lucky_cat.png\"\\); \"$\\($img.Width\\) x $\\($img.Height\\) px\"; $img.Dispose\\(\\))",
+      "PowerShell(\\(Get-Content \"C:\\\\Users\\\\mille\\\\Desktop\\\\my\\\\41_副業\\\\catalog\\\\css\\\\style.css\"\\).Count)",
+      "PowerShell($lines = Get-Content \"C:\\\\Users\\\\mille\\\\Desktop\\\\my\\\\41_副業\\\\catalog\\\\css\\\\style.css\"; $total = $lines.Count; $lines[\\($total-20\\)..\\($total-1\\)] | ForEach-Object { $_ })",
+      "WebFetch(domain:www.figma.com)",
+      "Bash(where python3 *)",
+      "Bash(where python *)",
+      "Bash(where py *)",
+      "PowerShell(\\(Get-Command python -ErrorAction SilentlyContinue\\).Source; \\(Get-Command python3 -ErrorAction SilentlyContinue\\).Source; \\(Get-Command py -ErrorAction SilentlyContinue\\).Source)",
+      "PowerShell(\\(Get-Command npx -ErrorAction SilentlyContinue\\).Source)"
+    ]
+  }
+}
