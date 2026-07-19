@@ -1142,6 +1142,11 @@ footer {
   .pricing-grid {
     grid-template-columns: 1fr;
   }
+  .pricing-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
 }
 
 /* 料金ボックス */
