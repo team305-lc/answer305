@@ -2480,7 +2480,20 @@ footer {
   .invest-grid,
   .team-grid { grid-template-columns: 1fr; }
 
-  .games-grid { grid-template-columns: repeat(2, 1fr); }
+  .games-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 12px;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+  }
+  .games-grid .game-card {
+    flex: 0 0 72vw;
+    max-width: 280px;
+    scroll-snap-align: start;
+  }
 
   .page-hero { padding: 48px 20px 40px; }
 
