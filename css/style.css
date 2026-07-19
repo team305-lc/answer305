@@ -1024,6 +1024,108 @@ footer {
   margin-top: 1px;
 }
 
+/* 料金セクション */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 64px;
+}
+
+.pricing-card {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.06);
+  border-top: 4px solid var(--accent);
+}
+
+.pricing-service {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.pricing-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pricing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid #eef0f5;
+  padding-bottom: 10px;
+}
+
+.pricing-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.pricing-label {
+  font-size: 0.88rem;
+  color: #555;
+}
+
+.pricing-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.pricing-value.free {
+  color: #1a8a3a;
+  font-size: 1.2rem;
+}
+
+.pricing-unit {
+  font-size: 0.78rem;
+  font-weight: 400;
+  color: #888;
+}
+
+.pricing-highlight {
+  font-size: 0.82rem;
+  color: #444;
+  line-height: 1.6;
+  background: #f0f4ff;
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-top: 4px;
+}
+
+.pricing-badge {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 20px;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+
+.pricing-note {
+  font-size: 0.82rem;
+  color: #777;
+  margin-top: 4px;
+  line-height: 1.6;
+}
+
+@media (max-width: 640px) {
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* 料金ボックス */
 .service-price {
   margin-top: 24px;
