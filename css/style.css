@@ -1073,6 +1073,15 @@ footer {
 .pricing-label {
   font-size: 0.88rem;
   color: #555;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pricing-label-sub {
+  font-size: 0.75rem;
+  color: #999;
+  font-weight: 400;
 }
 
 .pricing-value {
