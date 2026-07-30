@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>バケツリスト | 3.05</title>
+  <meta name="description" content="フリーランスWebクリエイター3.05のバケツリスト。生きているうちにやりたいこと、夢の記録。">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://team305-lc.github.io/answer305/html/bucket.html">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:url" content="https://team305-lc.github.io/answer305/html/bucket.html">
+  <meta property="og:title" content="バケツリスト | 3.05">
+  <meta property="og:description" content="フリーランスWebクリエイター3.05のバケツリスト。生きているうちにやりたいこと、夢の記録。">
+  <meta property="og:image" content="https://team305-lc.github.io/answer305/img/philosophy_01.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="バケツリスト | 3.05">
+  <meta name="twitter:description" content="フリーランスWebクリエイター3.05のバケツリスト。生きているうちにやりたいこと、夢の記録。">
+  <meta name="twitter:image" content="https://team305-lc.github.io/answer305/img/philosophy_01.jpg">
+  <link rel="icon" href="../img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body data-page="bucket">
+
+  <header></header>
+  <div class="mobile-menu" id="mobileMenu"></div>
+
+  <div class="page-hero">
+    <h2>バケツリスト</h2>
+    <p>
+      生きているうちにやりたいこと。<br>
+      夢を持ち続け、ひとつずつ形にしていく。
+    </p>
+  </div>
+
+  <div class="page-body">
+
+    <div class="bucket-filter" role="group" aria-label="表示フィルター">
+      <button class="bucket-filter-btn active" data-filter="all">
+        すべて <span class="bucket-count" id="cnt-all">26</span>
+      </button>
+      <button class="bucket-filter-btn" data-filter="done">
+        達成済み <span class="bucket-count" id="cnt-done">0</span>
+      </button>
+      <button class="bucket-filter-btn" data-filter="pending">
+        未達成 <span class="bucket-count" id="cnt-pending">26</span>
+      </button>
+    </div>
+
+    <div class="bucket-grid" id="bucketGrid">
+
+      <div class="bucket-card" data-status="pending" data-id="1">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/1.png" alt="世界一周旅行をする" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.01</p>
+          <p class="bucket-title">世界一周旅行をする</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="2">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/2.png" alt="日本一周旅行をする" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.02</p>
+          <p class="bucket-title">日本一周旅行をする</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="3">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/3.png" alt="NBAオールスターを観に行く" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.03</p>
+          <p class="bucket-title">NBAオールスターを観に行く</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="4">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/4.png" alt="NBAファイナルを観に行く" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.04</p>
+          <p class="bucket-title">NBAファイナルを観に行く</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="5">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/5.png" alt="会社を作る" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.05</p>
+          <p class="bucket-title">会社を作る</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="6">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/6.png" alt="NBAチームのオーナーになる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.06</p>
+          <p class="bucket-title">NBAチームのオーナーになる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="7">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/7.png" alt="FIREする" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.07</p>
+          <p class="bucket-title">FIREする</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="8">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/8.png" alt="鰻重を食べる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.08</p>
+          <p class="bucket-title">鰻重を食べる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="9">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/9.png" alt="最新のiPhoneを手に入れる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.09</p>
+          <p class="bucket-title">最新のiPhoneを手に入れる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="10">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/10.png" alt="青森でりんごを食べる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.10</p>
+          <p class="bucket-title">青森でりんごを食べる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="11">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/11.png" alt="北海道でカニを食べる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.11</p>
+          <p class="bucket-title">北海道でカニを食べる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="12">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/12.png" alt="小説を書く" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.12</p>
+          <p class="bucket-title">小説を書く</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="13">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/13.png" alt="年収を1,000万円にする" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.13</p>
+          <p class="bucket-title">年収を1,000万円にする</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="14">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/14.png" alt="ゲームを作る" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.14</p>
+          <p class="bucket-title">ゲームを作る</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="15">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/15.png" alt="最期に幸せだったと思える人生を送る" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.15</p>
+          <p class="bucket-title">最期に幸せだったと思える人生を送る</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="16">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/16.png" alt="フリーランスとして月10万円を稼ぐ" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.16</p>
+          <p class="bucket-title">フリーランスとして月10万円を稼ぐ</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="17">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/17.png" alt="配当金だけで生活費を賄う" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.17</p>
+          <p class="bucket-title">配当金だけで生活費を賄う</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="18">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/18.png" alt="宇宙へ行く" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.18</p>
+          <p class="bucket-title">宇宙へ行く</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="19">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/19.png" alt="豊田和牛のステーキを食べる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.19</p>
+          <p class="bucket-title">豊田和牛のステーキを食べる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="20">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/20.png" alt="異業種交流会のメンバーとオフ会をする" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.20</p>
+          <p class="bucket-title">異業種交流会のメンバーとオフ会をする</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="21">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/21.png" alt="小学校・中学校時代の友人と遊ぶ" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.21</p>
+          <p class="bucket-title">小学校・中学校時代の友人と遊ぶ</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="22">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/22.png" alt="50歳までバスケを続ける" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.22</p>
+          <p class="bucket-title">50歳までバスケを続ける</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="23">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/23.png" alt="岩手でわんこそばを食べる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.23</p>
+          <p class="bucket-title">岩手でわんこそばを食べる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="24">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/24.png" alt="やりたいゲームを全部する" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.24</p>
+          <p class="bucket-title">やりたいゲームを全部する</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="25">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/25.png" alt="バスケットコートを手に入れる" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.25</p>
+          <p class="bucket-title">バスケットコートを手に入れる</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+      <div class="bucket-card" data-status="pending" data-id="26">
+        <div class="bucket-img-wrap">
+          <img src="../img/baketlist/26.png" alt="アリーナを作る" class="bucket-img" loading="lazy" onerror="this.src='../img/no_photo.svg'">
+        </div>
+        <div class="bucket-body">
+          <p class="bucket-num">No.26</p>
+          <p class="bucket-title">アリーナを作る</p>
+        </div>
+        <div class="bucket-footer">
+          <span class="bucket-tag bucket-tag--done">達成済み ✓</span>
+          <span class="bucket-tag bucket-tag--pending">未達成</span>
+        </div>
+      </div>
+
+    </div><!-- /.bucket-grid -->
+
+  </div><!-- /.page-body -->
+
+  <!-- モーダル -->
+  <div class="bucket-modal" id="bucketModal">
+    <div class="bucket-modal-backdrop" id="bucketModalBackdrop"></div>
+    <div class="bucket-modal-box" role="dialog" aria-modal="true" aria-labelledby="bucketModalTitle">
+      <button class="bucket-modal-close" id="bucketModalClose" aria-label="閉じる">&times;</button>
+      <div class="bucket-modal-img-area">
+        <img id="bucketModalImg" src="" alt="" class="bucket-modal-img">
+      </div>
+      <div class="bucket-modal-content">
+        <p class="bucket-modal-num" id="bucketModalNum"></p>
+        <h3 class="bucket-modal-title" id="bucketModalTitleEl"></h3>
+        <div class="bucket-modal-status-wrap" id="bucketModalStatusWrap"></div>
+        <p class="bucket-modal-desc" id="bucketModalDesc"></p>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+  <button class="back-to-top" id="backToTop" aria-label="トップへ戻る">↑</button>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      /* ===== バケツリストの詳細テキスト ===== */
+      const descs = {
+        1:  '人生で一度は世界の絶景・文化・食を自分の目で見て体験したい。各国の多様な価値観に触れ、視野を広げる旅へ。',
+        2:  '日本の魅力をすべて知りたい。47都道府県を制覇し、各地の食・自然・文化を肌で感じる。',
+        3:  '世界最高峰のバスケットボールの祭典を現地で体感する。ファン垂涎のAll-Starを生で見る夢。',
+        4:  '頂点を決める戦いの熱気を、アリーナで直接感じたい。チャンピオンシップの瞬間を現地で目撃する。',
+        5:  '自分のビジョンを実現するための器を持つ。仲間と共に価値を生み出す会社を立ち上げる。',
+        6:  'NBAと深く繋がる夢の究極形。バスケへの愛情を形にした、最大級の挑戦。',
+        7:  '経済的自由を手にして、自分らしい生き方を選ぶ。資産収入で生活費を賄い、時間と場所の自由を得る。',
+        8:  '本物の鰻重を老舗の名店でじっくり味わう。うな重の最高峰を体験したい。',
+        9:  '発売日に最新機種をゲットする。テクノロジーの最前線を常に手元に置いておきたい。',
+        10: '本場青森で、もぎたてのりんごを頬張る。産地でしか味わえない甘さと香りを体験する。',
+        11: '北海道で新鮮なカニをお腹いっぱい食べる。毛ガニ・タラバ・ズワイをすべて制覇したい。',
+        12: '自分の手で物語を紡ぎ、世界に伝える。ずっと心の中にある物語をいつか小説として完成させる。',
+        13: 'フリーランスとして圧倒的な価値を提供し続けた先にある目標。技術と信頼を積み上げて到達する。',
+        14: 'プレイヤーとして愛してきたゲームを、今度は作る側になる。自分が遊びたいゲームを自分で作る。',
+        15: 'すべての夢の集大成。人生の最期に「幸せだった」と心から思える日々を積み重ねていく。',
+        16: 'フリーランスとして副業から本業へのステップ。月10万円を安定して稼げる力を身につける。',
+        17: '資産が自分の代わりに働く生活を実現する。配当収入で生活費をカバーし、経済的自由に近づく。',
+        18: '地球を外から見る、究極の体験。宇宙から地球を眺めた瞬間に何を感じるか、確かめたい。',
+        19: '日本が誇る最高級の牛肉を堪能する。豊田和牛の霜降りステーキを特別な日に味わいたい。',
+        20: 'オンラインの繋がりをリアルに。交流会で出会った仲間と実際に会い、縁を深める。',
+        21: '昔の仲間とまた笑い合いたい。時間が経っても変わらない友情を確かめ合う再会の場を作る。',
+        22: 'バスケは生涯スポーツ。50歳でもコートに立ち、全力でプレーし続ける体と情熱を保つ。',
+        23: '岩手の名物、わんこそばに挑戦する。何杯食べられるか、本場で記録を試したい。',
+        24: '積みゲーをゼロにする日を夢見て。やりたいゲームリストを全部クリアする至福の時間。',
+        25: 'いつでもバスケができる自分だけのコート。仲間を呼んで好きなだけプレーできる場所を持つ。',
+        26: '究極の夢。自分のアリーナを持ち、バスケの聖地を作る。夢の中の夢。',
+      };
+
+      /* ===== フィルター ===== */
+      const cards = document.querySelectorAll('.bucket-card');
+      const cntAll = document.getElementById('cnt-all');
+      const cntDone = document.getElementById('cnt-done');
+      const cntPending = document.getElementById('cnt-pending');
+
+      function updateCounts() {
+        let done = 0, pending = 0;
+        cards.forEach(c => { c.dataset.status === 'done' ? done++ : pending++; });
+        cntAll.textContent = cards.length;
+        cntDone.textContent = done;
+        cntPending.textContent = pending;
+      }
+
+      function applyFilter(filter) {
+        cards.forEach(card => {
+          card.style.display = (filter === 'all' || card.dataset.status === filter) ? '' : 'none';
+        });
+      }
+
+      document.querySelectorAll('.bucket-filter-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.bucket-filter-btn').forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          applyFilter(this.dataset.filter);
+        });
+      });
+
+      updateCounts();
+
+      /* ===== モーダル ===== */
+      const modal       = document.getElementById('bucketModal');
+      const modalImg    = document.getElementById('bucketModalImg');
+      const modalNum    = document.getElementById('bucketModalNum');
+      const modalTitle  = document.getElementById('bucketModalTitleEl');
+      const modalStatus = document.getElementById('bucketModalStatusWrap');
+      const modalDesc   = document.getElementById('bucketModalDesc');
+      const modalClose  = document.getElementById('bucketModalClose');
+      const modalBack   = document.getElementById('bucketModalBackdrop');
+
+      function openModal(card) {
+        const id     = parseInt(card.dataset.id);
+        const num    = card.querySelector('.bucket-num').textContent;
+        const title  = card.querySelector('.bucket-title').textContent;
+        const status = card.dataset.status;
+        const imgEl  = card.querySelector('.bucket-img');
+
+        modalImg.src = imgEl.src;
+        modalImg.alt = title;
+        modalNum.textContent = num;
+        modalTitle.textContent = title;
+        modalDesc.textContent = descs[id] || '';
+
+        modalStatus.innerHTML = status === 'done'
+          ? '<span class="bucket-tag bucket-tag--done">達成済み ✓</span>'
+          : '<span class="bucket-tag bucket-tag--pending">未達成</span>';
+
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        modalClose.focus();
+      }
+
+      function closeModal() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      cards.forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+      });
+
+      modalClose.addEventListener('click', closeModal);
+      modalBack.addEventListener('click', closeModal);
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+    })();
+  </script>
+</body>
+</html>

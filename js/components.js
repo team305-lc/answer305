@@ -28,6 +28,7 @@
         <a href="${pageBase}library.html"${isActive('library')}>本棚・ゲーム</a>
         <a href="${pageBase}basketball.html"${isActive('basketball')}>バスケ</a>
         <a href="${pageBase}investment.html"${isActive('investment')}>投資</a>
+        <a href="${pageBase}bucket.html"${isActive('bucket')}>バケツリスト</a>
         <a href="${pageBase}request.html" class="btn-request">お仕事を依頼する</a>
       </nav>
       <button class="hamburger" id="hamburger" aria-label="メニュー">
@@ -46,6 +47,7 @@
       <a href="${pageBase}library.html">本棚・ゲーム</a>
       <a href="${pageBase}basketball.html">バスケ</a>
       <a href="${pageBase}investment.html">投資</a>
+      <a href="${pageBase}bucket.html">バケツリスト</a>
       <a href="${pageBase}request.html" class="btn-request">お仕事を依頼する</a>
     `;
   }
@@ -62,6 +64,7 @@
         <a href="${pageBase}library.html">本棚・ゲーム</a>
         <a href="${pageBase}basketball.html">バスケ</a>
         <a href="${pageBase}investment.html">投資</a>
+        <a href="${pageBase}bucket.html">バケツリスト</a>
         <a href="${pageBase}request.html">お仕事を依頼する</a>
       </nav>
       <p class="footer-copy">&copy; 2026 3.05. All rights reserved.</p>
