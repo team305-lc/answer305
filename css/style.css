@@ -3136,6 +3136,14 @@ footer {
 }
 
 @media (max-width: 640px) {
+  .bucket-filter { gap: 8px; }
+  .bucket-filter-btn {
+    flex: 1;
+    justify-content: center;
+    padding: 7px 6px;
+    font-size: 0.82rem;
+  }
+
   .bucket-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
