@@ -2439,6 +2439,273 @@ footer {
   line-height: 1.8;
 }
 
+/* ===== 高配当株 投資ページ内リンク ===== */
+.invest-grid--dividend { margin-bottom: 32px; }
+
+.invest-tag--s { background: #fef9c3; color: #854d0e; }
+.invest-tag--a { background: #dbeafe; color: #1e40af; }
+
+.invest-detail-link {
+  text-align: center;
+  margin: 8px 0 48px;
+}
+
+.invest-detail-btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: opacity 0.18s;
+}
+
+.invest-detail-btn:hover { opacity: 0.82; }
+
+/* ===== 高配当株ページ（dividend.html）===== */
+.dv-breadcrumb {
+  margin-bottom: 32px;
+}
+
+.dv-breadcrumb a {
+  color: var(--accent);
+  font-size: 0.88rem;
+  text-decoration: none;
+}
+
+.dv-breadcrumb a:hover { text-decoration: underline; }
+
+.dv-lead {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.dv-definition {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+
+.dv-def-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.dv-def-icon { font-size: 2rem; }
+
+.dv-def-label {
+  font-size: 0.82rem;
+  color: #888;
+  margin-bottom: 4px;
+}
+
+.dv-def-val {
+  font-size: 1.1rem;
+  color: var(--navy);
+}
+
+.dv-def-sep {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #aaa;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 格付けカード */
+.dv-rank-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin-bottom: 32px;
+}
+
+.dv-rank-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+}
+
+.dv-rank-s { border-top: 4px solid #f59e0b; }
+.dv-rank-a { border-top: 4px solid var(--accent); }
+.dv-rank-b { border-top: 4px solid #6b7280; }
+.dv-rank-z { border-top: 4px solid #ef4444; }
+
+.dv-rank-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.dv-rank-badge {
+  display: inline-block;
+  font-size: 0.88rem;
+  font-weight: 800;
+  padding: 3px 12px;
+  border-radius: 20px;
+}
+
+.dv-rank-badge--s { background: #fef9c3; color: #92400e; }
+.dv-rank-badge--a { background: #dbeafe; color: #1e40af; }
+.dv-rank-badge--b { background: #f3f4f6; color: #374151; }
+.dv-rank-badge--z { background: #fee2e2; color: #991b1b; }
+
+.dv-rank-sub {
+  font-size: 0.78rem;
+  color: #888;
+}
+
+.dv-rank-cond-title {
+  font-size: 0.78rem;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.dv-rank-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.86rem;
+  color: #444;
+  line-height: 1.9;
+}
+
+/* 格付け階層 */
+.dv-hierarchy {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 16px 24px;
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.dv-hier-item {
+  padding: 6px 18px;
+  border-radius: 20px;
+  font-size: 0.88rem;
+}
+
+.dv-hier-s { background: #fef9c3; color: #92400e; }
+.dv-hier-a { background: #dbeafe; color: #1e40af; }
+.dv-hier-b { background: #f3f4f6; color: #374151; }
+
+.dv-hier-arrow { color: #aaa; font-size: 1.1rem; }
+
+.dv-hier-note {
+  font-size: 0.78rem;
+  color: #888;
+  font-weight: 400;
+  margin-left: 8px;
+}
+
+/* 購入タイミング */
+.dv-timing-box {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px 28px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  margin-bottom: 48px;
+  border-left: 4px solid #10b981;
+}
+
+.dv-timing-buy { border-left-color: #10b981; }
+
+.dv-timing-icon { font-size: 2rem; flex-shrink: 0; }
+
+.dv-timing-label { font-size: 0.82rem; color: #888; margin-bottom: 4px; }
+
+.dv-timing-main { font-size: 1rem; color: var(--navy); }
+
+/* 売却タイミング */
+.dv-sell-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+}
+
+.dv-sell-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  border-left: 4px solid var(--accent);
+}
+
+.dv-sell-item--verify { border-left-color: #f59e0b; }
+
+.dv-sell-num {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--accent);
+  line-height: 1;
+  min-width: 32px;
+  flex-shrink: 0;
+}
+
+.dv-sell-item--verify .dv-sell-num { color: #f59e0b; }
+
+.dv-sell-title {
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.dv-sell-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #fef9c3;
+  color: #92400e;
+  border-radius: 20px;
+  padding: 2px 10px;
+}
+
+.dv-sell-desc {
+  font-size: 0.88rem;
+  color: #555;
+  line-height: 1.8;
+}
+
+@media (max-width: 640px) {
+  .dv-definition { padding: 20px; gap: 12px; }
+  .dv-def-sep { width: 100%; text-align: left; }
+  .dv-hierarchy { gap: 6px; }
+  .dv-hier-note { margin-left: 0; width: 100%; }
+  .dv-sell-item { gap: 14px; }
+  .dv-timing-box { gap: 14px; }
+}
+
 /* .invest-note は invest-tag に統合したため用途変更 */
 .invest-note {
   display: inline-block;
