@@ -175,22 +175,26 @@
       return day === 0 || day === 6 || HOLIDAYS.has(dateStr);
     }
 
-    function renderSlots(containerId, dateStr, radioName, required) {
+    function makeSlots(dateStr) {
+      if (!dateStr) return [];
+      if (isWeekendOrHoliday(dateStr)) {
+        var s = []; for (var h = 6; h < 23; h++) s.push(h + ':00〜' + (h+1) + ':00'); return s;
+      }
+      return ['21:00〜22:00', '22:00〜23:00'];
+    }
+
+    function renderSlots(containerId, dateStr, selectName, required) {
       var container = document.getElementById(containerId);
       if (!container) return;
       if (!dateStr) {
         container.innerHTML = '<p class="form-note">先に日付を選んでください</p>';
         return;
       }
-      var slots = isWeekendOrHoliday(dateStr)
-        ? ['午前（9:00〜12:00）', '午後（12:00〜18:00）', '夜（18:00〜22:00）']
-        : ['21:00〜22:00', '22:00〜23:00'];
-
-      var html = '<div class="radio-group">';
-      slots.forEach(function (s) {
-        html += '<label class="radio-label"><input type="radio" name="' + radioName + '" value="' + s + '" autocomplete="off"> ' + s + '</label>';
-      });
-      html += '</div>';
+      var slots = makeSlots(dateStr);
+      var html = '<select name="' + selectName + '" id="' + selectName + 'Select">'
+        + '<option value="" disabled selected>選択してください</option>';
+      slots.forEach(function (s) { html += '<option value="' + s + '">' + s + '</option>'; });
+      html += '</select>';
       if (required) {
         html += '<span id="' + containerId + 'Error" class="field-error-msg" style="display:none;">時間を選択してください</span>';
       }
@@ -262,9 +266,9 @@
       var valid = true;
 
       // 第一希望時間
-      var time1El = form.querySelector('[name="talkTime1"]:checked');
+      var time1Sel = document.getElementById('talkTime1Select');
       var time1Err = document.getElementById('talkTime1SlotsError');
-      if (d1 && d1.value && !time1El) {
+      if (d1 && d1.value && (!time1Sel || !time1Sel.value)) {
         if (time1Err) time1Err.style.display = 'block';
         valid = false;
       } else {
@@ -287,10 +291,10 @@
       params.append(ENTRY.name,  form.querySelector('[name="talkName"]').value.trim());
       params.append(ENTRY.email, form.querySelector('[name="talkEmail"]').value.trim());
       if (d1 && d1.value) params.append(ENTRY.date1, d1.value);
-      if (time1El) params.append(ENTRY.time1, time1El.value);
+      if (time1Sel && time1Sel.value) params.append(ENTRY.time1, time1Sel.value);
       if (d2 && d2.value) params.append(ENTRY.date2, d2.value);
-      var time2El = form.querySelector('[name="talkTime2"]:checked');
-      if (time2El) params.append(ENTRY.time2, time2El.value);
+      var time2Sel = document.getElementById('talkTime2Select');
+      if (time2Sel && time2Sel.value) params.append(ENTRY.time2, time2Sel.value);
       if (topicEl) params.append(ENTRY.topic, topicEl.value);
       var cameraEl = form.querySelector('[name="talkCamera"]:checked');
       if (cameraEl) params.append(ENTRY.camera, cameraEl.value);
