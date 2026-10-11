@@ -52,7 +52,8 @@
         </p>
         <div class="talk-aside-note">
           <p>🕐 所要時間 : 30分〜1時間程度</p>
-          <p>💻 形式 : Google Meet / Zoom（希望に合わせます）</p>
+          <p>💻 形式 : Google Meet</p>
+          <p>😊 顔出し自由（カメラOFFでもOK）</p>
           <p>🆓 費用 : 無料</p>
         </div>
       </aside>
@@ -109,6 +110,15 @@
               <label class="radio-label"><input type="radio" name="talkTopic" value="その他" autocomplete="off"> その他</label>
             </div>
             <span id="talkTopicError" class="field-error-msg" style="display:none;">選択してください</span>
+          </div>
+
+          <div class="form-group">
+            <label>顔出し希望</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="talkCamera" value="顔出しする" autocomplete="off"> する</label>
+              <label class="radio-label"><input type="radio" name="talkCamera" value="顔出ししない" autocomplete="off"> しない</label>
+              <label class="radio-label"><input type="radio" name="talkCamera" value="どちらでも" autocomplete="off" checked> どちらでも</label>
+            </div>
           </div>
 
           <div class="form-group">
@@ -243,6 +253,7 @@
       date2:  'entry.REPLACE_DATE2',
       time2:  'entry.REPLACE_TIME2',
       topic:  'entry.REPLACE_TOPIC',
+      camera: 'entry.REPLACE_CAMERA',
       detail: 'entry.REPLACE_DETAIL'
     };
 
@@ -281,6 +292,8 @@
       var time2El = form.querySelector('[name="talkTime2"]:checked');
       if (time2El) params.append(ENTRY.time2, time2El.value);
       if (topicEl) params.append(ENTRY.topic, topicEl.value);
+      var cameraEl = form.querySelector('[name="talkCamera"]:checked');
+      if (cameraEl) params.append(ENTRY.camera, cameraEl.value);
       params.append(ENTRY.detail, form.querySelector('[name="talkDetail"]').value.trim());
 
       var btn = form.querySelector('.btn-submit');
