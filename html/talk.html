@@ -36,27 +36,20 @@
 
     <div class="talk-layout">
 
-      <!-- 左：案内 -->
+      <!-- 左：なぜ話したいか -->
       <aside class="talk-aside">
-        <p class="talk-aside-title">こんな方におすすめ</p>
-        <ul class="talk-topic-list">
-          <li>
-            <span class="talk-topic-icon">📈</span>
-            <span>高配当株投資を始めてみたい</span>
-          </li>
-          <li>
-            <span class="talk-topic-icon">🌐</span>
-            <span>ホームページ制作について聞きたい</span>
-          </li>
-          <li>
-            <span class="talk-topic-icon">💼</span>
-            <span>副業・フリーランスについて相談したい</span>
-          </li>
-          <li>
-            <span class="talk-topic-icon">💡</span>
-            <span>なんとなく話してみたい</span>
-          </li>
-        </ul>
+        <p class="talk-aside-title">なぜ話したいのか</p>
+        <p class="talk-aside-reason">
+          仕事でもなく、何かを売りたいわけでもなく、ただ<strong>人との繋がりを増やしたい</strong>と思っています。
+        </p>
+        <p class="talk-aside-reason">
+          普段はオンラインで発信するだけで、実際に言葉を交わす機会はそんなに多くありません。
+          このサイトを見てくれた人と、もう一歩だけ近づきたい。そんな気持ちです。
+        </p>
+        <p class="talk-aside-reason">
+          話題は何でも。投資やWebのことでも、日常のどうでもいい話でも、
+          「ちょっと聞いてみたかっただけ」でも、ぜんぶ歓迎です。
+        </p>
         <div class="talk-aside-note">
           <p>🕐 所要時間 : 30分〜1時間程度</p>
           <p>💻 形式 : Google Meet / Zoom（希望に合わせます）</p>
@@ -75,51 +68,53 @@
           </div>
 
           <div class="form-group">
-            <label>ご連絡先（メール or SNS）<span class="required">*</span></label>
-            <input type="text" name="talkContact" id="talkContactInput" placeholder="example@email.com  または  @X_handle" maxlength="255">
+            <label>メールアドレス<span class="required">*</span></label>
+            <input type="email" name="talkEmail" id="talkEmailInput" placeholder="example@email.com" maxlength="255">
             <span class="form-note">日程調整の返信に使用します。</span>
+          </div>
+
+          <!-- 第一希望 -->
+          <div class="talk-wish-block">
+            <p class="talk-wish-label">第一希望</p>
+            <div class="form-group">
+              <label>日付<span class="required">*</span></label>
+              <input type="date" name="talkDate1" id="talkDate1Input">
+            </div>
+            <div class="form-group">
+              <label>時間<span class="required">*</span></label>
+              <div id="talkTime1Slots"><p class="form-note">先に日付を選んでください</p></div>
+            </div>
+          </div>
+
+          <!-- 第二希望 -->
+          <div class="talk-wish-block talk-wish-block--optional">
+            <p class="talk-wish-label">第二希望<span class="talk-wish-optional">（任意）</span></p>
+            <div class="form-group">
+              <label>日付</label>
+              <input type="date" name="talkDate2" id="talkDate2Input">
+            </div>
+            <div class="form-group">
+              <label>時間</label>
+              <div id="talkTime2Slots"><p class="form-note">先に日付を選んでください</p></div>
+            </div>
           </div>
 
           <div class="form-group">
             <label>話したい内容<span class="required">*</span></label>
-            <textarea name="talkTopic" id="talkTopicInput" placeholder="投資について聞きたい、Web制作の相談がしたい、なんでも…" maxlength="500"></textarea>
-            <span class="char-counter" id="talkTopicCounter">0 / 500</span>
-          </div>
-
-          <div class="form-group">
-            <label>第一希望日<span class="required">*</span></label>
-            <input type="date" name="talkDate1" id="talkDate1Input">
-          </div>
-
-          <div class="form-group">
-            <label>第二希望日</label>
-            <input type="date" name="talkDate2" id="talkDate2Input">
-            <span class="form-note">第一希望が難しい場合の候補日です（任意）。</span>
-          </div>
-
-          <div class="form-group">
-            <label>ご希望の時間帯<span class="required">*</span></label>
-            <div class="radio-group" id="talkTimeGroup">
-              <label class="radio-label"><input type="checkbox" name="talkTime" value="午前（9:00〜12:00）" autocomplete="off"> 午前（9:00〜12:00）</label>
-              <label class="radio-label"><input type="checkbox" name="talkTime" value="午後（12:00〜18:00）" autocomplete="off"> 午後（12:00〜18:00）</label>
-              <label class="radio-label"><input type="checkbox" name="talkTime" value="夜（18:00〜22:00）" autocomplete="off"> 夜（18:00〜22:00）</label>
-            </div>
-            <span id="talkTimeError" class="field-error-msg" style="display:none;">1つ以上選択してください</span>
-          </div>
-
-          <div class="form-group">
-            <label>ビデオ通話ツール</label>
             <div class="radio-group">
-              <label class="radio-label"><input type="radio" name="talkTool" value="Google Meet" checked> Google Meet</label>
-              <label class="radio-label"><input type="radio" name="talkTool" value="Zoom"> Zoom</label>
-              <label class="radio-label"><input type="radio" name="talkTool" value="どちらでも"> どちらでも</label>
+              <label class="radio-label"><input type="radio" name="talkTopic" value="IT相談" autocomplete="off"> IT相談</label>
+              <label class="radio-label"><input type="radio" name="talkTopic" value="投資" autocomplete="off"> 投資</label>
+              <label class="radio-label"><input type="radio" name="talkTopic" value="バスケ" autocomplete="off"> バスケ</label>
+              <label class="radio-label"><input type="radio" name="talkTopic" value="雑談" autocomplete="off"> 雑談</label>
+              <label class="radio-label"><input type="radio" name="talkTopic" value="その他" autocomplete="off"> その他</label>
             </div>
+            <span id="talkTopicError" class="field-error-msg" style="display:none;">選択してください</span>
           </div>
 
           <div class="form-group">
-            <label>その他メッセージ</label>
-            <textarea name="talkMessage" id="talkMessageInput" placeholder="何でもどうぞ。" maxlength="1000"></textarea>
-            <span class="char-counter" id="talkMessageCounter">0 / 1000</span>
+            <label>話したい内容（詳細）</label>
+            <textarea name="talkDetail" id="talkDetailInput" placeholder="詳しく教えてもらえると助かります。なくても大丈夫です。" maxlength="1000"></textarea>
+            <span class="char-counter" id="talkDetailCounter">0 / 1000</span>
           </div>
 
           <button type="submit" class="btn-submit">送信する</button>
@@ -132,7 +127,7 @@
           <p style="font-size:1.1rem; font-weight:700; color:#1a1a2e; margin-bottom:8px;">送信が完了しました！</p>
           <p style="font-size:0.9rem; color:#777; line-height:1.8;">
             お申し込みありがとうございます。<br>
-            ご連絡先に日程の調整をお送りします。<br>
+            メールアドレスに日程の調整をお送りします。<br>
             少しお待ちください 😊
           </p>
           <a href="../index.html" style="display:inline-block; margin-top:20px; padding:10px 28px; background:var(--navy,#2a4a8a); color:#fff; border-radius:8px; text-decoration:none; font-size:0.9rem;">TOPへ戻る</a>
@@ -149,5 +144,153 @@
 
   <script src="../js/components.js"></script>
   <script src="../js/main.js"></script>
+  <script>
+  (function () {
+    // ===== 祝日リスト（2026〜2027）=====
+    var HOLIDAYS = new Set([
+      '2026-01-01','2026-01-12','2026-02-11','2026-02-23',
+      '2026-03-20','2026-04-29','2026-05-03','2026-05-04',
+      '2026-05-05','2026-05-06','2026-07-20','2026-08-11',
+      '2026-09-21','2026-09-23','2026-10-12','2026-11-03',
+      '2026-11-23',
+      '2027-01-01','2027-01-11','2027-02-11','2027-02-23',
+      '2027-03-21','2027-04-29','2027-05-03','2027-05-04',
+      '2027-05-05','2027-07-19','2027-08-11','2027-09-20',
+      '2027-09-23','2027-10-11','2027-11-03','2027-11-23'
+    ]);
+
+    function isWeekendOrHoliday(dateStr) {
+      var d = new Date(dateStr + 'T00:00:00');
+      var day = d.getDay();
+      return day === 0 || day === 6 || HOLIDAYS.has(dateStr);
+    }
+
+    function renderSlots(containerId, dateStr, radioName, required) {
+      var container = document.getElementById(containerId);
+      if (!container) return;
+      if (!dateStr) {
+        container.innerHTML = '<p class="form-note">先に日付を選んでください</p>';
+        return;
+      }
+      var slots = isWeekendOrHoliday(dateStr)
+        ? ['午前（9:00〜12:00）', '午後（12:00〜18:00）', '夜（18:00〜22:00）']
+        : ['21:00〜22:00', '22:00〜23:00'];
+
+      var html = '<div class="radio-group">';
+      slots.forEach(function (s) {
+        html += '<label class="radio-label"><input type="radio" name="' + radioName + '" value="' + s + '" autocomplete="off"> ' + s + '</label>';
+      });
+      html += '</div>';
+      if (required) {
+        html += '<span id="' + containerId + 'Error" class="field-error-msg" style="display:none;">時間を選択してください</span>';
+      }
+      container.innerHTML = html;
+    }
+
+    // 日付範囲（今日〜1ヶ月後）
+    var today = new Date();
+    var maxDate = new Date(today);
+    maxDate.setMonth(maxDate.getMonth() + 1);
+    var todayStr = today.toISOString().split('T')[0];
+    var maxStr   = maxDate.toISOString().split('T')[0];
+
+    var d1 = document.getElementById('talkDate1Input');
+    var d2 = document.getElementById('talkDate2Input');
+
+    if (d1) {
+      d1.min = todayStr; d1.max = maxStr;
+      d1.addEventListener('change', function () {
+        renderSlots('talkTime1Slots', d1.value, 'talkTime1', true);
+      });
+    }
+    if (d2) {
+      d2.min = todayStr; d2.max = maxStr;
+      d2.addEventListener('change', function () {
+        renderSlots('talkTime2Slots', d2.value, 'talkTime2', false);
+      });
+    }
+
+    // 文字数カウンター
+    [['talkNameInput','talkNameCounter',100],['talkDetailInput','talkDetailCounter',1000]].forEach(function (a) {
+      var el = document.getElementById(a[0]), ct = document.getElementById(a[1]), max = a[2];
+      if (!el || !ct) return;
+      var upd = function () { var n = el.value.length; ct.textContent = n + ' / ' + max; ct.classList.toggle('char-counter--over', n >= max); };
+      el.addEventListener('input', upd); upd();
+    });
+
+    // メール全角→半角
+    var emailEl = document.getElementById('talkEmailInput');
+    if (emailEl) {
+      emailEl.addEventListener('input', function () {
+        emailEl.value = emailEl.value
+          .replace(/[Ａ-Ｚａ-ｚ０-９]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); })
+          .replace(/[^\x21-\x7E]/g, '');
+      });
+    }
+
+    // フォーム送信
+    var form    = document.getElementById('talkForm');
+    var success = document.getElementById('talkSuccessMsg');
+    if (!form || !success) return;
+
+    // TODO: Google Form を作成して下記 URL と entry ID を置き換えてください
+    var FORM_ACTION = 'https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/formResponse';
+    var ENTRY = {
+      name:   'entry.REPLACE_NAME',
+      email:  'entry.REPLACE_EMAIL',
+      date1:  'entry.REPLACE_DATE1',
+      time1:  'entry.REPLACE_TIME1',
+      date2:  'entry.REPLACE_DATE2',
+      time2:  'entry.REPLACE_TIME2',
+      topic:  'entry.REPLACE_TOPIC',
+      detail: 'entry.REPLACE_DETAIL'
+    };
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var valid = true;
+
+      // 第一希望時間
+      var time1El = form.querySelector('[name="talkTime1"]:checked');
+      var time1Err = document.getElementById('talkTime1SlotsError');
+      if (d1 && d1.value && !time1El) {
+        if (time1Err) time1Err.style.display = 'block';
+        valid = false;
+      } else {
+        if (time1Err) time1Err.style.display = 'none';
+      }
+
+      // 話したい内容
+      var topicEl = form.querySelector('[name="talkTopic"]:checked');
+      var topicErr = document.getElementById('talkTopicError');
+      if (!topicEl) {
+        if (topicErr) topicErr.style.display = 'block';
+        valid = false;
+      } else {
+        if (topicErr) topicErr.style.display = 'none';
+      }
+
+      if (!valid) return;
+
+      var params = new URLSearchParams();
+      params.append(ENTRY.name,  form.querySelector('[name="talkName"]').value.trim());
+      params.append(ENTRY.email, form.querySelector('[name="talkEmail"]').value.trim());
+      if (d1 && d1.value) params.append(ENTRY.date1, d1.value);
+      if (time1El) params.append(ENTRY.time1, time1El.value);
+      if (d2 && d2.value) params.append(ENTRY.date2, d2.value);
+      var time2El = form.querySelector('[name="talkTime2"]:checked');
+      if (time2El) params.append(ENTRY.time2, time2El.value);
+      if (topicEl) params.append(ENTRY.topic, topicEl.value);
+      params.append(ENTRY.detail, form.querySelector('[name="talkDetail"]').value.trim());
+
+      var btn = form.querySelector('.btn-submit');
+      btn.disabled = true;
+
+      fetch(FORM_ACTION, { method: 'POST', mode: 'no-cors', body: params })
+        .then(function () { form.style.display = 'none'; success.style.display = 'block'; })
+        .catch(function () { btn.disabled = false; });
+    });
+  })();
+  </script>
 </body>
 </html>

@@ -3556,25 +3556,14 @@ footer {
   margin-bottom: 16px;
 }
 
-.talk-topic-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.talk-topic-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
+.talk-aside-reason {
   font-size: 0.88rem;
   color: #444;
-  line-height: 1.6;
+  line-height: 1.9;
+  margin-bottom: 14px;
 }
 
-.talk-topic-icon { flex-shrink: 0; font-size: 1.1rem; }
+.talk-aside-reason strong { color: var(--navy); }
 
 .talk-aside-note {
   background: #f9fafb;
@@ -3589,6 +3578,37 @@ footer {
 
 /* 右：フォームカラム */
 .talk-form-col { min-width: 0; }
+
+/* 第一・第二希望ブロック */
+.talk-wish-block {
+  background: #f9fafb;
+  border-radius: 10px;
+  padding: 20px 20px 8px;
+  margin-bottom: 24px;
+  border-left: 3px solid var(--accent);
+}
+
+.talk-wish-block--optional {
+  border-left-color: #d1d5db;
+}
+
+.talk-wish-label {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+
+.talk-wish-block--optional .talk-wish-label {
+  color: #9ca3af;
+}
+
+.talk-wish-optional {
+  font-weight: 400;
+  font-size: 0.78rem;
+  margin-left: 4px;
+}
 
 @media (max-width: 700px) {
   .talk-layout {
