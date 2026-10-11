@@ -335,6 +335,101 @@ if (form && successMsg) {
   });
 }
 
+// ===== お話しフォーム（talk.html）→ Google Forms 送信 =====
+(function () {
+  const talkForm = document.getElementById('talkForm');
+  const talkSuccess = document.getElementById('talkSuccessMsg');
+  if (!talkForm || !talkSuccess) return;
+
+  // TODO: Google Form を作成して下記 URL とエントリー名を置き換えてください
+  const TALK_FORM_ACTION = 'https://docs.google.com/forms/d/e/REPLACE_WITH_YOUR_FORM_ID/formResponse';
+  const ENTRY = {
+    name:    'entry.REPLACE_NAME',
+    contact: 'entry.REPLACE_CONTACT',
+    topic:   'entry.REPLACE_TOPIC',
+    date1:   'entry.REPLACE_DATE1',
+    date2:   'entry.REPLACE_DATE2',
+    time:    'entry.REPLACE_TIME',
+    tool:    'entry.REPLACE_TOOL',
+    message: 'entry.REPLACE_MESSAGE',
+  };
+
+  // 文字数カウンター
+  [
+    ['talkNameInput',    'talkNameCounter',    100],
+    ['talkTopicInput',   'talkTopicCounter',   500],
+    ['talkMessageInput', 'talkMessageCounter', 1000],
+  ].forEach(([inputId, counterId, max]) => {
+    const el = document.getElementById(inputId);
+    const counter = document.getElementById(counterId);
+    if (!el || !counter) return;
+    const update = () => {
+      const len = el.value.length;
+      counter.textContent = `${len} / ${max}`;
+      counter.classList.toggle('char-counter--over', len >= max);
+    };
+    el.addEventListener('input', update);
+    update();
+  });
+
+  // 時間帯チェックボックスのエラー解除
+  talkForm.querySelectorAll('[name="talkTime"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        const e = document.getElementById('talkTimeError');
+        if (e) e.style.display = 'none';
+      }
+    });
+  });
+
+  // 日付の最小値を今日に設定
+  const today = new Date().toISOString().split('T')[0];
+  ['talkDate1Input', 'talkDate2Input'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.min = today;
+  });
+
+  talkForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    // 時間帯バリデーション
+    const times = Array.from(talkForm.querySelectorAll('[name="talkTime"]:checked'));
+    const timeErr = document.getElementById('talkTimeError');
+    if (times.length === 0) {
+      if (timeErr) timeErr.style.display = 'block';
+      return;
+    }
+    if (timeErr) timeErr.style.display = 'none';
+
+    const params = new URLSearchParams();
+    params.append(ENTRY.name,    talkForm.querySelector('[name="talkName"]').value.trim());
+    params.append(ENTRY.contact, talkForm.querySelector('[name="talkContact"]').value.trim());
+    params.append(ENTRY.topic,   talkForm.querySelector('[name="talkTopic"]').value.trim());
+
+    const d1 = talkForm.querySelector('[name="talkDate1"]').value;
+    if (d1) params.append(ENTRY.date1, d1);
+    const d2 = talkForm.querySelector('[name="talkDate2"]').value;
+    if (d2) params.append(ENTRY.date2, d2);
+
+    times.forEach(cb => params.append(ENTRY.time, cb.value));
+
+    const toolEl = talkForm.querySelector('[name="talkTool"]:checked');
+    if (toolEl) params.append(ENTRY.tool, toolEl.value);
+
+    params.append(ENTRY.message, talkForm.querySelector('[name="talkMessage"]').value.trim());
+
+    const btn = talkForm.querySelector('.btn-submit');
+    btn.disabled = true;
+
+    fetch(TALK_FORM_ACTION, { method: 'POST', mode: 'no-cors', body: params })
+      .then(() => {
+        talkForm.style.display = 'none';
+        talkSuccess.style.display = 'block';
+      })
+      .catch(() => { btn.disabled = false; });
+  });
+})();
+
 // ===== 本棚カルーセル =====
 (function () {
   const shelves = document.querySelectorAll('.shelf-carousel');

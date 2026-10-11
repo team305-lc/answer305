@@ -3445,3 +3445,155 @@ footer {
   .bucket-modal-title { font-size: 1.05rem; }
   .bucket-modal-content { padding: 20px 20px 28px; }
 }
+
+/* ============================================================
+   トップページ プロフィール欄 お話しCTAボタン
+   ============================================================ */
+.talk-cta-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: linear-gradient(135deg, var(--accent, #4f46e5) 0%, #7c3aed 100%);
+  color: #fff;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-top: 24px;
+  text-decoration: none;
+  transition: opacity 0.18s, transform 0.18s;
+}
+
+.talk-cta-btn:hover {
+  opacity: 0.88;
+  transform: translateY(-2px);
+}
+
+.talk-cta-icon {
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.talk-cta-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 3px;
+}
+
+.talk-cta-main {
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.talk-cta-sub {
+  font-size: 0.72rem;
+  opacity: 0.85;
+  line-height: 1.5;
+}
+
+.talk-cta-arrow {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   お話しページ（talk.html）
+   ============================================================ */
+.talk-hero {
+  background: linear-gradient(135deg, var(--navy, #1a1a2e) 0%, #2d1b69 100%);
+  color: #fff;
+  text-align: center;
+  padding: 60px 24px 56px;
+}
+
+.talk-hero-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.talk-hero h2 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: 0.04em;
+}
+
+.talk-hero p {
+  font-size: 0.95rem;
+  line-height: 1.9;
+  opacity: 0.88;
+}
+
+.talk-body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px 80px;
+}
+
+.talk-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* 左：案内 */
+.talk-aside {
+  background: #fff;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+  position: sticky;
+  top: 80px;
+}
+
+.talk-aside-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+.talk-topic-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.talk-topic-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 0.88rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.talk-topic-icon { flex-shrink: 0; font-size: 1.1rem; }
+
+.talk-aside-note {
+  background: #f9fafb;
+  border-radius: 8px;
+  padding: 14px 16px;
+  font-size: 0.82rem;
+  color: #555;
+  line-height: 2;
+}
+
+.talk-aside-note p { margin: 0; }
+
+/* 右：フォームカラム */
+.talk-form-col { min-width: 0; }
+
+@media (max-width: 700px) {
+  .talk-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .talk-aside { position: static; }
+}
