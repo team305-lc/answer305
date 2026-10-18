@@ -1,3 +1,36 @@
+// ===== 資格賞状モーダル =====
+(function () {
+  const overlay = document.getElementById('certModalOverlay');
+  if (!overlay) return;
+
+  const img   = document.getElementById('certModalImg');
+  const title = document.getElementById('certModalTitle');
+  const close = document.getElementById('certModalClose');
+
+  function openModal(src, alt) {
+    img.src = src;
+    img.alt = alt;
+    title.textContent = alt;
+    overlay.classList.add('is-open');
+    overlay.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    overlay.classList.remove('is-open');
+    overlay.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.cert-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => openModal(btn.dataset.img, btn.dataset.title));
+  });
+
+  close.addEventListener('click', closeModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+})();
+
 // 年齢の自動計算・更新
 // 誕生日: 1982年9月28日、9月27日23:59:59に年齢を更新
 function calculateAge() {

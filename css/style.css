@@ -1771,6 +1771,79 @@ footer {
   font-size: 0.88rem;
   color: #555;
   line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.cert-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+  padding: 6px 14px;
+  background: #f1f5f9;
+  color: var(--navy);
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.cert-modal-btn:hover { background: #e2e8f0; }
+
+/* 賞状モーダル */
+.cert-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.72);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.cert-modal-overlay.is-open {
+  display: flex;
+  animation: bucketFadeIn 0.2s ease;
+}
+
+.cert-modal-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 24px;
+  max-width: 680px;
+  width: 100%;
+  position: relative;
+  animation: bucketSlideIn 0.26s cubic-bezier(0.34,1.1,0.64,1);
+}
+
+.cert-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.cert-modal-close:hover { color: #333; }
+
+.cert-modal-title {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+
+.cert-modal-img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
 }
 
 .skills-category { margin-bottom: 28px; }
