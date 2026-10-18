@@ -103,8 +103,8 @@
           <div class="form-group">
             <label>顔出し希望</label>
             <div class="radio-group">
-              <label class="radio-label"><input type="radio" name="talkCamera" value="顔出しする" autocomplete="off"> する</label>
-              <label class="radio-label"><input type="radio" name="talkCamera" value="顔出ししない" autocomplete="off"> しない</label>
+              <label class="radio-label"><input type="radio" name="talkCamera" value="する" autocomplete="off"> する</label>
+              <label class="radio-label"><input type="radio" name="talkCamera" value="しない" autocomplete="off"> しない</label>
               <label class="radio-label"><input type="radio" name="talkCamera" value="どちらでも" autocomplete="off" checked> どちらでも</label>
             </div>
           </div>
@@ -178,9 +178,9 @@
     function makeSlots(dateStr) {
       if (!dateStr) return [];
       if (isWeekendOrHoliday(dateStr)) {
-        var s = []; for (var h = 6; h < 23; h++) s.push(h + ':00〜' + (h+1) + ':00'); return s;
+        var s = []; for (var h = 6; h < 23; h++) s.push(h + ':00～' + (h+1) + ':00'); return s;
       }
-      return ['21:00〜22:00', '22:00〜23:00'];
+      return ['21:00～22:00', '22:00～23:00'];
     }
 
     function renderSlots(containerId, dateStr, selectName, required) {
