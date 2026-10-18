@@ -286,17 +286,25 @@
 
       if (!valid) return;
 
+      function appendDate(params, entryBase, dateStr) {
+        if (!dateStr) return;
+        var parts = dateStr.split('-');
+        params.append(entryBase + '_year',  parts[0]);
+        params.append(entryBase + '_month', String(Number(parts[1])));
+        params.append(entryBase + '_day',   String(Number(parts[2])));
+      }
+
       var params = new URLSearchParams();
       params.append(ENTRY.name,  form.querySelector('[name="talkName"]').value.trim());
       params.append(ENTRY.email, form.querySelector('[name="talkEmail"]').value.trim());
-      if (d1 && d1.value) params.append(ENTRY.date1, d1.value);
+      appendDate(params, ENTRY.date1, d1 ? d1.value : '');
       if (time1Sel && time1Sel.value) params.append(ENTRY.time1, time1Sel.value);
-      if (d2 && d2.value) params.append(ENTRY.date2, d2.value);
+      appendDate(params, ENTRY.date2, d2 ? d2.value : '');
       var time2Sel = document.getElementById('talkTime2Select');
       if (time2Sel && time2Sel.value) params.append(ENTRY.time2, time2Sel.value);
-      if (topicEl) params.append(ENTRY.topic, topicEl.value);
       var cameraEl = form.querySelector('[name="talkCamera"]:checked');
       if (cameraEl) params.append(ENTRY.camera, cameraEl.value);
+      if (topicEl) params.append(ENTRY.topic, topicEl.value);
       params.append(ENTRY.detail, form.querySelector('[name="talkDetail"]').value.trim());
 
       var btn = form.querySelector('.btn-submit');
