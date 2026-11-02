@@ -53,7 +53,7 @@ header {
   box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-header h1 {
+.header-title {
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -909,7 +909,7 @@ footer {
   color: #fff;
 }
 
-.works-hero h2 {
+.works-hero h1 {
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
   margin-bottom: 16px;
@@ -1390,7 +1390,7 @@ footer {
   padding: 64px 24px 56px;
 }
 
-.request-hero h2 {
+.request-hero h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 12px;
@@ -1684,7 +1684,7 @@ footer {
 
   /* 依頼ページ */
   .request-hero { padding: 40px 20px 36px; }
-  .request-hero h2 { font-size: 1.5rem; }
+  .request-hero h1 { font-size: 1.5rem; }
 
   .request-layout { grid-template-columns: 1fr; }
   .request-aside { position: static; }
@@ -1712,7 +1712,7 @@ footer {
   color: #fff;
 }
 
-.page-hero h2 {
+.page-hero h1 {
   font-size: clamp(1.6rem, 4vw, 2.4rem);
   font-weight: 700;
   margin-bottom: 16px;
@@ -3595,7 +3595,7 @@ footer {
   margin-bottom: 16px;
 }
 
-.talk-hero h2 {
+.talk-hero h1 {
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 800;
   margin-bottom: 16px;

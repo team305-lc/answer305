@@ -20,7 +20,7 @@
   const header = document.querySelector('header');
   if (header) {
     header.innerHTML = `
-      <h1><img src="${imgBase}answer305_logo.png" alt="3.05" class="header-logo"></h1>
+      <div class="header-title"><img src="${imgBase}answer305_logo.png" alt="3.05" class="header-logo"></div>
       <nav>
         <a href="${toIndex}"${isActive('top')}>TOP</a>
         <a href="${pageBase}works.html"${isActive('works')}>Works</a>
