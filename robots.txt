@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://team305-lc.github.io/answer305/sitemap.xml
